@@ -1208,13 +1208,9 @@ body.header-below:not(.template-slider) #Header{min-height:0}
 	.header-fixed #Top_bar .secondary_menu_wrapper{display:none}
 	.tr-menu.header-fixed #Top_bar:not(.is-sticky){background:none!important;box-shadow:0 0 0 0 transparent}
 
-
 	.header-fixed.woocommerce-demo-store #Action_bar{top:45px}
 
-
-
 	.header-fixed.woocommerce-demo-store #Top_bar{top:45px!important}
-
 
 	.header-fixed.woocommerce-demo-store.ab-show #Top_bar{top:76px!important}
 
