@@ -3866,6 +3866,51 @@ const social = [
 	},
 ]
 
+const fixed_social = [
+    {
+        'icon' : 'assets/images/phone-icon.png',
+        'link' : '#',
+        'title' : 'Call',
+        'class' : 'phone-icon show-desk',
+        'target' : '_blank',
+    },
+    {
+        'icon' : 'assets/images/emergency-icon.png',
+        'link' : '#',
+        'title' : 'Emergency',
+        'class' : 'emergency-icon show-desk',
+        'target' : '_blank',
+    },
+    {
+        'icon' : 'assets/images/phone-mob.png',
+        'link' : '#',
+        'title' : 'Call',
+        'class' : 'phone-icon show-mob',
+        'target' : '_blank',
+    },
+    {
+        'icon' : 'assets/images/emergency-mob.png',
+        'link' : '#',
+        'title' : 'Emergency',
+        'class' : 'emergency-icon show-mob',
+        'target' : '_blank',
+    },
+    {
+        'icon' : 'assets/images/mail-mob.png',
+        'link' : '#',
+        'title' : 'Email',
+        'class' : 'mail-icon show-mob',
+        'target' : '_blank',
+    },
+    {
+        'icon' : 'assets/images/facebook-mob.png',
+        'link' : '#',
+        'title' : 'Facebook',
+        'class' : 'fb-icon show-mob',
+        'target' : '_blank',
+    },
+]
+
 function header_data(head){
 	if($('#menu-main-menu').length > 0){
 		let menu_html = '';
@@ -3894,6 +3939,15 @@ function header_data(head){
 		});
 		$('#Action_bar .social').html(social_html);
 	}
+
+    if($('#Action_bar .social').length > 0){
+        let hour_html = `<div class="business-hours">
+            <h4>Business Hours</h4>
+            <p>Monday - Saturday<br>8:00 am - 6:00 pm</p>
+            <p>Sunday: Closed </p>
+        </div>`;
+        $(hour_html).insertBefore('#Action_bar .social');
+    }
 
 	if(inline_style){
 		$('#global-styles-inline-css').html(inline_style);
