@@ -375,6 +375,10 @@ body.mobile-side-slide{
     padding: 30px 0;
 }
 
+#Top_bar.is-sticky {
+    padding: 20px 0;
+}
+
 #Top_bar .column {
     align-items: center;
     width: 100%;
@@ -401,7 +405,7 @@ body #Top_bar.is-sticky{
     top: 0px!important;
     height: auto;
     opacity: 1;
-    z-index: 1;
+    z-index: 999;
 }
 
 #Top_bar .top_bar_left::after,
@@ -412,6 +416,15 @@ body #Top_bar.is-sticky{
 #Top_bar #logo {
     height: 81px !important;
     line-height: 1 !important;
+    transition: all 0.3s !important;
+}
+
+#Top_bar #logo img.logo-main {
+    display: block !important;
+}
+
+#Top_bar #logo img:not(.logo-main) {
+    display: none!important;
 }
 
 #Top_bar .menu {
@@ -450,6 +463,11 @@ body #Top_bar.is-sticky{
     transform: translate(-50%, -50%);
 }
 
+#Top_bar.is-sticky #menu-main-menu > .menu-item > a::before {
+    width: 65px;
+    height: 65px;
+}
+
 #menu-main-menu > .menu-item > a:hover:before,
 #menu-main-menu > .menu-item.current-menu-item > a:before,
 #menu-main-menu > .menu-item.current-menu-ancestor > a:before {
@@ -459,7 +477,7 @@ body #Top_bar.is-sticky{
 
 
 #Top_bar .menu > li > a span:not(.description) {
-    padding: 0 30px;
+    padding: 0 31px;
     line-height: 1!important;
     border: none;
     transition: all 0.3s;
@@ -521,7 +539,7 @@ body #Top_bar.is-sticky{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 130px 0;
+    padding: 130px 0 125px;
 }
 
 #section-intro .section_wrapper {
@@ -574,4 +592,474 @@ body #Top_bar.is-sticky{
     color: var(--color-text-title);
     line-height: 1.75;
     margin-bottom: 40px;
+}
+
+/* service */
+#section-service-patients {
+    padding: 82px 0 0;
+    background-image: url('../images/bg-service-section.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section-service-patients .section_wrapper {
+    max-width: 100%;
+    padding: 0 var(--pd-right-container) 0 var(--pd-left-container);
+
+}
+
+.service-wrap .box-title {
+    position: relative;
+    z-index: -1;
+}
+
+.service-wrap h1 {
+    font-size: 186.95px;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    color: var(--color-hover-social);
+    opacity: 0.3;
+    line-height: 1;
+    text-transform: uppercase;
+    display: block;
+    margin-left: 8px;
+    text-align: right;
+    width: 100%;
+    height: 186.95px;
+}
+
+.service-wrap .box-wrap-service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -195px;
+}
+
+.service-wrap .box-wrap-service .box-2 {
+    padding-top: 213px;
+}
+
+.service-wrap .box-service h6 {
+    font-family: var(--font-montserrat);
+    color: #313338;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.service-wrap .box-wrap-service .box-desc {
+    margin-top: 52px;
+    padding: 0 calc((100% - (var(--container)))/2) ;
+}
+
+.service-wrap .box-desc p.first {
+    font-family: var(--font-lobster);
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 1.45;
+    color: var(--color-hover-social);
+    width: 75%;
+    margin-bottom: 25px;
+}
+
+.service-wrap .box-desc p.last {
+    font-size: 23px;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    color: #313338;
+    line-height: 1.7;
+    padding-left: 205px;
+}
+
+/* section-patients */
+#section-patients {
+    padding: 85px 0 262px;
+}
+
+#section-patients .section_wrapper {
+    max-width: 100%;
+    padding: 0 var(--pd-right-container) 0 var(--pd-left-container);
+}
+
+.patients-wrap .box-patients {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin: -15px -17px;
+}
+
+.patients-wrap .box-patients .item {
+    padding: 0 15px;
+    margin: 15px 0 !important;
+}
+
+.patients-wrap .box-patients .item-1 {
+    width: 27.5%;
+}
+
+.patients-wrap .box-patients .item-2 {
+    width: 45%;
+}
+
+.patients-wrap .box-patients .item-3 {
+    width: 27.5%;
+}
+
+.patients-wrap .box-patients .item-4 {
+    padding-left: 107px;
+    width: 38.8%;
+}
+
+.patients-wrap .box-patients .item-5 {
+    width: 45%;
+}
+
+.patients-wrap .box-patients img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+}
+
+.patients-wrap .box-content {
+    padding: 0 calc((100% - (var(--container)))/2);
+    margin-top: 73px;
+    text-align: center;
+}
+
+.patients-wrap .box-content h2 {
+    font-size: 50px;
+    font-family: var(--font-lobster);
+    font-weight: 400;
+    line-height: 1;
+    background: linear-gradient(90deg, rgba(67,185,235,1) 0%, rgba(67,185,235,1) 50%, rgba(151,133,227,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 41px;
+}
+
+.patients-wrap .box-content p {
+    font-size: 23px;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    line-height: 1.7;
+    color: #313338;
+    margin-bottom: 22px;
+}
+
+.patients-wrap .box-content p:first-child {
+    margin-bottom: 22px;
+}
+
+/* section special footer */
+#section-special {
+    background-image: url('../images/bg-special-section.jpg');
+}
+
+#section-special .special-top-row {
+    display: flex;
+    margin: -165px -48px 0;
+}
+
+#section-special .special-top-row > div {
+    width: 50%;
+    margin: 0 48px;
+}
+
+#section-special .col-patient-wrap {
+    background-image: url('../images/bg-new-patient-contact.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 38px;
+    border-radius: 0 55px 0 0;
+}
+
+#section-special .col-patient-item {
+    background-color: #313338;
+    padding: 50px 40px 55px;
+    border-radius: 0 15px 0 0;
+}
+
+#section-special .col-patient-wrap .row-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 34px;
+    margin-bottom: 28px;
+    border-bottom: 1px var(--color-hover-social) solid;
+}
+
+#section-special .col-patient-wrap .row-title::after {
+    position: absolute;
+    content: '';
+    background-color: #313338;
+    width: 10px;
+    height: 2px;
+    bottom: -2px;
+    right: 31%;
+    z-index: 111;
+}
+
+#section-special .col-patient-wrap .title-left h4,
+#section-special .col-patient-wrap .col-content h2 {
+    font-size: 30px;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    color: var(--color-text-title);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#section-special .col-patient-wrap .title-left h4 {
+    margin-bottom: 13px;
+}
+
+#section-special .col-patient-wrap .title-left p,
+#section-special .col-patient-wrap .col-content p {
+    font-size: 25px;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    color: var(--color-text-title);
+    line-height: 1;
+}
+
+#section-special .col-patient-wrap .title-right h2 {
+    font-size: 72px;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    color: var(--color-text-title);
+    line-height: 1;
+    margin-top: -5px;
+}
+
+#section-special .col-patient-wrap .col-content h2 {
+    margin-bottom: 15px;
+}
+
+#section-special .col-patient-wrap .col-content p {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+#section-special .col-patient-wrap .col-content p::before {
+    position: absolute;
+    content: '';
+    background-color: var(--color-text-title);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 15px;
+    left: 4px;
+}
+
+#section-special .special-top-row .col-booking-wrap {
+    background-color: var(--color-text-title);
+    border-radius: 55px 0 0 0;
+    overflow: hidden;
+    padding: 55px 63px;
+}
+
+#section-special .special-top-row .col-booking-wrap .wrap-title h2 {
+    font-size: 32px;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    color: #313338;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 30px !important;
+}
+
+#section-special .bookingform .booking-row {
+    margin-bottom: 28px !important;
+}
+
+#section-special span.wpcf7-form-control-wrap {
+    width: 100%;
+    position: relative!important;
+    display: inline-block;
+    
+}
+
+#section-special .bookingform .booking-row input,
+#section-special .bookingform .booking-row textarea {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 1px solid #313338;
+    box-shadow: none;
+    padding: 8px 0 !important;
+}
+
+#section-special .bookingform .booking-row textarea {
+    width: 100% !important;
+    height: 163px !important;
+}
+
+#section-special .bookingform .booking-row input,
+#section-special .bookingform .booking-row textarea::placeholder,
+#section-special .bookingform .booking-row input::placeholder {
+    color: #313338 !important;
+    font-family: var(--font-montserrat) !important;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#section-special .bookingform .booking-row-date #datepicker {
+    background-image: url('../images/icon-date.png');
+    background-repeat: no-repeat;
+    background-size: 33px 32px;
+    background-position: 99% 0%;
+}
+
+#section-special .submit-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+#section-special .booking-btn {
+    font-size: 22px !important;
+    color: #fff !important;
+    font-family: var(--font-montserrat) !important;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgba(67,185,235,1) 0%, rgba(67,185,235,1) 50%, rgba(151,133,227,1) 100%);
+    text-transform: uppercase;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s !important;
+    text-decoration: none !important;
+    line-height: 1;
+    width: 205px;
+    height: 72px;
+    margin: 0 auto !important;
+}
+
+#section-special .booking-btn:hover {
+    background: linear-gradient(90deg, rgba(49,51,56,1) 0%, rgba(49,51,56,1) 100%, rgba(0,212,255,1) 100%) !important;
+}
+
+#section-special .bookingform .wpcf7-spinner {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+#section-special .special-bottom-row {
+    padding: 87px 0;
+}
+
+#section-special .special-bottom-row h3 {
+    position: relative;
+    font-size: 35px;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    color: var(--color-hover-social);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#section-special .special-bottom-row h3::before,
+#section-special .special-bottom-row h3::after {
+    position: absolute;
+    content: '';
+    background-color: var(--color-hover-social);
+    width: 33%;
+    height: 1px;
+    bottom: 8px;
+}
+
+#section-special .special-bottom-row h3::before {
+    left: 0;
+}
+
+#section-special .special-bottom-row h3::after {
+    right: 0;
+}
+
+#section-special .special-bottom-row .info-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section-special .special-bottom-row .info-wrap .col-item {
+    width: calc(100% / 3);
+}
+
+#section-special .special-bottom-row .info-wrap .col-item:not(.item-center) {
+    margin-top: 13px;
+}
+
+#section-special .special-bottom-row .info-wrap .col-item p {
+    font-size: 19px;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    color: var(--color-text-title);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+#section-special .special-bottom-row .info-wrap .col-item p a {
+    color: var(--color-text-title);
+}
+
+#section-special .special-bottom-row .info-wrap .item-left p:first-child {
+    font-weight: 600;
+}
+
+#section-special .special-bottom-row .info-wrap .item-center {
+    text-align: center;
+}
+
+#section-special .special-bottom-row .info-wrap .item-center .name-dr {
+    font-weight: 700;
+    font-size: 23px;
+}
+
+#section-special .special-bottom-row .info-wrap .item-center .phone {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+#section-special .special-bottom-row .info-wrap .item-center .note {
+    font-size: 17px;
+}
+
+/* Footer */
+#Footer {
+    background-color:var(--color-text-title) !important;
+}
+
+#Footer .footer_copy {
+    border: none;
+}
+
+#Footer .footer_copy .column.one {
+    padding: 32px 0;
+}
+
+#Footer .footer_copy .wrap-footer p {
+    font-size: 20px;
+    font-family: var(--font-montserrat);
+    color: #313338;
+    font-weight: 400;
+    line-height: 1;
+}
+
+#Footer .footer_copy .wrap-footer p a {
+    font-weight: 700;
+    transition: all 0.3s;
+}
+#Footer .footer_copy .wrap-footer p a {
+    color: var(--color-hover-social);
 }
