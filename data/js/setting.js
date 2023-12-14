@@ -39,6 +39,12 @@ function startup_site() {
 function container(){
     var wh = $(window).height() - ($('#Footer').outerHeight() + $('#Header_wrapper').outerHeight());
     $('body').css('--ct-h',wh+'px');
+
+    if($(window).width() < 1240){
+        $('body').removeClass('header-open');
+    }else{
+        $('body').addClass('header-open');
+    }
 }
 
 $(window).ready(function () {
