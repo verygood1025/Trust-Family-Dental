@@ -288,76 +288,6 @@ body.mobile-side-slide{
     overflow-x: hidden;
 }
 
-
-@media(max-width: 1699.5px){
-    body{
-        --header-contaner: 1380px;
-        --header-w: 770px;
-    }
-}
-
-@media(max-width: 1439.5px){
-    body{
-        --container: 1300px;
-        --header-contaner: var(--container);
-        --header-w: 720px;
-    }
-}
-
-@media(max-width: 1367.5px){
-    body {
-        --container: 1190px;
-    }
-
-    .section_wrapper, .container {
-        max-width: var( --container)!important;
-    }
-}
-
-@media only screen and (max-width: 1239.5px){
-    body {
-        --container: 940px;
-    }
-}
-
-@media only screen and (max-width: 991.5px){
-    body {
-        --container: 700px;
-    }
-}
-
-@media only screen and (max-width: 767.5px){
-    body {
-        --container: 550px;
-    }
-
-    .content_wrapper .section_wrapper, .container, .four.columns .widget-area{
-        padding-left: 0px!important;
-        padding-right: 0px!important;
-        width: calc(100% - 60px);
-    }
-}
-
-@media only screen and (max-width: 590.5px){
-    body {
-        --container: calc(100% - 60px);
-        font-size: 15.11px!important;
-        line-height: 21.59px!important;
-    }
-}
-
-@media only screen and (max-width: 413.5px){
-    body {
-        --container: calc(100% - 30px);
-        font-size: 14.11px!important;
-        line-height: 20.59px!important;
-    }
-
-    .content_wrapper .section_wrapper, .container, .four.columns .widget-area{
-        width: calc(100% - 30px);
-    }
-}
-
 #Header .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -596,7 +526,7 @@ body #Top_bar.is-sticky{
 
 /* service */
 #section-service-patients {
-    padding: 82px 0 0;
+    padding: 4.271vw 0 0; /*82px 0 0*/
     background-image: url('../images/bg-service-section.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -613,7 +543,7 @@ body #Top_bar.is-sticky{
 }
 
 .service-wrap h1 {
-    font-size: 186.95px;
+    font-size: 9.737vw; /*186.95px*/
     font-family: var(--font-montserrat);
     font-weight: 700;
     color: var(--color-hover-social);
@@ -624,18 +554,27 @@ body #Top_bar.is-sticky{
     margin-left: 8px;
     text-align: right;
     width: 100%;
-    height: 186.95px;
+    height: 9.737vw; /*186.95px*/
 }
 
 .service-wrap .box-wrap-service {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: -195px;
+    margin-top: -10.156vw; /*-195px*/
+}
+
+.service-wrap .box-wrap-service > div {
+    width: 50%;
+}
+
+.service-wrap .box-wrap-service .box-1 {
+    padding-right: 2.448vw; /*47px*/
 }
 
 .service-wrap .box-wrap-service .box-2 {
-    padding-top: 213px;
+    padding-top: 11.094vw; /*213px*/
+    padding-left: 2.448vw; /*47px*/
 }
 
 .service-wrap .box-service h6 {
@@ -650,8 +589,9 @@ body #Top_bar.is-sticky{
 }
 
 .service-wrap .box-wrap-service .box-desc {
-    margin-top: 52px;
+    margin-top: 2.708vw; /*52px*/
     padding: 0 calc((100% - (var(--container)))/2) ;
+    width: 100%;
 }
 
 .service-wrap .box-desc p.first {
@@ -675,7 +615,7 @@ body #Top_bar.is-sticky{
 
 /* section-patients */
 #section-patients {
-    padding: 85px 0 262px;
+    padding: 4.427vw 0 13.646vw; /*85px 0 262px*/
 }
 
 #section-patients .section_wrapper {
@@ -708,7 +648,7 @@ body #Top_bar.is-sticky{
 }
 
 .patients-wrap .box-patients .item-4 {
-    padding-left: 107px;
+    padding-left: 5.573vw !important; /*107*/
     width: 38.8%;
 }
 
@@ -762,7 +702,7 @@ body #Top_bar.is-sticky{
 
 #section-special .special-top-row {
     display: flex;
-    margin: -165px -48px 0;
+    margin: -8.594vw -48px 0; /*-165px -48px 0*/
 }
 
 #section-special .special-top-row > div {
@@ -955,7 +895,7 @@ body #Top_bar.is-sticky{
 }
 
 #section-special .special-bottom-row {
-    padding: 87px 0;
+    padding: 4.531vw 0; /*87px 0*/
 }
 
 #section-special .special-bottom-row h3 {
@@ -1011,6 +951,7 @@ body #Top_bar.is-sticky{
 
 #section-special .special-bottom-row .info-wrap .col-item p a {
     color: var(--color-text-title);
+    transition: all 0.3s;
 }
 
 #section-special .special-bottom-row .info-wrap .item-left p:first-child {
@@ -1035,6 +976,12 @@ body #Top_bar.is-sticky{
     font-size: 17px;
 }
 
+#section-special .special-bottom-row .info-wrap .item-center .phone a:hover,
+#section-special .special-bottom-row .info-wrap .item-right .email a:hover,
+#section-special .special-bottom-row .info-wrap .item-right .address a:hover {
+    color: var(--color-hover-social);
+}
+
 /* Footer */
 #Footer {
     background-color:var(--color-text-title) !important;
@@ -1046,6 +993,10 @@ body #Top_bar.is-sticky{
 
 #Footer .footer_copy .column.one {
     padding: 32px 0;
+}
+
+.footer-copy-center #Footer .footer_copy .copyright {
+    margin: 0;
 }
 
 #Footer .footer_copy .wrap-footer p {
@@ -1064,6 +1015,205 @@ body #Top_bar.is-sticky{
     color: var(--color-hover-social);
 }
 
+@media (max-width: 1367.5px) {
+    body {
+        --pd-left-container: 30px;
+        --pd-right-container: 30px;
+    }
+
+    /* INTRO */
+    #section-intro {
+        padding: 90px 0;
+    }
+
+    /* SERVICES */
+    .service-wrap .box-wrap-service .box-1 {
+        padding-right: 15px;
+    }
+
+    .service-wrap .box-wrap-service .box-2 {
+        padding-left: 15px;
+    }
+
+    /* PATIENTS */
+    .patients-wrap .box-patients .item {
+        padding: 0 10px;
+        margin: 10px 0 !important;
+    }
+
+    #Footer .footer_copy .wrap-footer p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1239.5px) {
+    body {
+        --container: 930px
+    }
+
+    #Top_bar {
+        padding: 10px 0 !important;
+    }
+
+    body #Top_bar.is-sticky {
+        position: fixed;
+    }
+
+    #Top_bar.is-sticky #logo {
+        height: 60px !important;
+        line-height: 60px !important;
+    }
+    
+    #Top_bar .menu {
+        margin-right: -1.211vw;
+    }
+
+    #Top_bar .menu > li > a:after {
+        display: none;
+    }
+
+    #Top_bar .menu > li > a {
+        font-size: 18px;
+    }
+
+    #Top_bar .menu > li > a span:not(.description) {
+        padding: 0 22px;
+    }
+
+    #menu-main-menu > .menu-item > a::before {
+        width: 55px !important;
+        height: 55px !important;
+    }
+
+    /* INTRO */
+    #section-intro .box-right {
+        margin-top: -8px;
+    }
+
+    /* SERVICES */
+    .service-wrap .box-service h6 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .patients-wrap .box-content {
+        margin-top: 60px;
+    }
+
+    .patients-wrap .box-content h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    
+    #section-intro .box-right p,
+    .service-wrap .box-desc p.last,
+    .patients-wrap .box-content p {
+        font-size: 20px;
+    }
+
+    .patients-wrap .box-content p {
+        margin-bottom: 15px;
+    }
+
+    .service-wrap .box-desc p.first {
+        font-size: 32px;
+    }
+
+    #section-special .special-top-row {
+        margin: -8.594vw -30px 0;
+    }
+
+    #section-special .special-top-row > div {
+        margin: 0 30px;
+    }
+
+    #section-special .col-patient-wrap {
+        padding: 30px;
+        border-radius: 0 45px 0 0;
+    }
+
+    #section-special .col-patient-item {
+        padding: 40px 30px 45px;
+    }
+
+    #section-special .col-patient-wrap .row-title {
+        padding-bottom: 30px;
+        margin-bottom: 25px;
+    }
+
+    #section-special .col-patient-wrap .title-left h4,
+    #section-special .col-patient-wrap .col-content h2 {
+        font-size: 22px;
+    }
+
+    #section-special .col-patient-wrap .title-left h4 {
+        margin-bottom: 5px;
+    }
+
+    #section-special .col-patient-wrap .title-left p,
+    #section-special .col-patient-wrap .col-content p {
+        font-size: 20px;
+    }
+
+    #section-special .col-patient-wrap .title-right h2 {
+        font-size: 50px;
+    }
+
+    #section-special .special-top-row .col-booking-wrap {
+        border-radius: 45px 0 0 0;
+        padding: 50px 50px;
+    }
+
+    #section-special .special-top-row .col-booking-wrap .wrap-title h2 {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    #section-special .bookingform .booking-row input,
+    #section-special .bookingform .booking-row textarea::placeholder,
+    #section-special .bookingform .booking-row input::placeholder {
+        font-size: 16px;
+    }
+
+    #section-special .bookingform .booking-row-date #datepicker {
+        background-size: 24px 23px;
+    }
+
+    #section-special .bookingform .booking-row textarea {
+        height: 100px !important;
+    }
+
+    #section-special .booking-btn {
+        font-size: 16px !important;
+        width: 160px;
+        height: 47px;
+    }
+
+    #section-special .special-bottom-row h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    #section-special .special-bottom-row .info-wrap .col-item p,
+    #section-special .special-bottom-row .info-wrap .item-center .note {
+        font-size: 14px;
+    }
+
+    #section-special .special-bottom-row .info-wrap .item-center .name-dr {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #section-special .special-bottom-row .info-wrap .item-center .phone {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    #Footer .footer_copy .column.one {
+        padding: 20px 0;
+    }
+}
+
 @media (min-width: 992px) {
     body:not(.header-simple) #Top_bar #menu {
         display: block !important;
@@ -1076,12 +1226,155 @@ body #Top_bar.is-sticky{
 
 
 @media (max-width: 991.5px) {
+    body {
+        --container: 700px
+    }
+
     body:not(.header-simple) #Top_bar #menu {
         display: none !important;
     }
 
     #Top_bar a.responsive-menu-toggle {
         display: block !important;
+    }
+
+    /* BANNER */
+    .banner-item .banner-content h4 {
+        font-size: 65px;
+        margin-bottom: 30px;
+    }
+
+    .banner-item .banner-content h5 {
+        font-size: 25px;
+    }
+
+    /* INTRO */
+    #section-intro .section_wrapper {
+        max-width: var(--container) !important;
+        padding: 0 !important;
+    }
+
+    #section-intro .intro-wrap {
+        flex-wrap: wrap;
+    }
+
+    #section-intro > div {
+        width: 100% !important;
+    }
+
+    #section-intro .box-left h1 {
+        margin-bottom: 35px !important;
+    }
+
+    #section-intro .box-right {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* SERVICES */
+    #section-service-patients {
+        padding: 20px 0 0;
+    }
+    #section-service-patients .section_wrapper {
+        padding: 0;
+    }
+
+    #section-service-patients #section-service,
+    #section-service-patients #section-patients {
+        padding-left: calc((100% - (var(--container)))/2);
+        padding-right: calc((100% - (var(--container)))/2);
+    }
+
+    .service-wrap .box-wrap-service {
+        margin-top: 20px;
+    }
+
+    .service-wrap .box-wrap-service > div {
+        width: 100% ;
+        padding: 0 !important;
+        margin-bottom: 50px;
+    }
+
+    .service-wrap .box-wrap-service .box-desc {
+        margin-top: -5px;
+    }
+
+    .service-wrap h1 {
+        text-align: center;
+        font-size: 10.091vw; /*100px*/
+        height: 10.091vw; /*100px*/
+        margin: 0;
+    }
+
+    .service-wrap .box-service h6 {
+        font-size: 23px;
+        margin-top: 15px;
+    }
+
+    .service-wrap .box-desc p {
+        width: 100% !important;
+    }
+
+    .service-wrap .box-desc p.first {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .service-wrap .box-desc p.last {
+        padding-left: 8.073vw; /*80px*/
+    }
+
+    .patients-wrap .box-patients {
+        margin: -15px 0;
+    }
+    
+    .patients-wrap .box-patients .item {
+        margin: 10px 0 !important;
+        padding: 0 !important;
+    }
+
+    .patients-wrap .box-patients .item-1 {
+        width: 65%;
+    }
+
+    .patients-wrap .box-patients .item-2 {
+        width: 100%;
+        margin-left: 70px !important;
+        margin-right: -33.5px !important;
+    }
+
+    .patients-wrap .box-patients .item-3 {
+        width: 100%;
+        margin-right: 70px !important;
+        margin-left: 140px !important;
+    }
+
+    .patients-wrap .box-patients .item-4 {
+        width: 100%;
+        margin-left: 70px;
+    }
+
+    .patients-wrap .box-patients .item-5 {
+        width: 100%;
+        margin-left: 70px !important;
+        margin-right: -33.5px !important;
+    }
+
+    /* FOOTER CONTACT */
+    #section-special .special-top-row {
+        flex-wrap: wrap;
+    }
+
+    #section-special .special-top-row > div {
+        width: 100%;
+    }
+
+    #section-special .col-patient-wrap {
+        margin-bottom: 50px !important;
+    }
+
+    #section-special .special-top-row .col-booking-wrap {
+        border-radius: 0;
     }
 }
 
