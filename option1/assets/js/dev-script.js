@@ -1,4 +1,4 @@
-fixed_social = [
+fixed_social2 = [
     {
         'icon' : 'assets/images/phone-icon.png',
         'link' : '#',
@@ -37,9 +37,9 @@ fixed_social = [
 ]
 
 $(window).ready(function(){
-	if(fixed_social.length > 0){
+	if(fixed_social2.length > 0){
 		let social_html = '';
-		$.each(fixed_social, function(i, item){
+		$.each(fixed_social2, function(i, item){
 			social_html += `<li class="${item.class}"><a href="${item.link}" target="${item.target}"><img src="${item.icon}"></a></li>`;
 		});
 		$('.fixed-socials ul').html(social_html);
