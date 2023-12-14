@@ -2438,7 +2438,7 @@ const inline_style = `
         }
     }
 
-    @media only screen and (max-width: 1239px) {
+    @media only screen and (max-width: 1239.5px) {
         #Top_bar #menu {
             display: none;
             height: auto;
