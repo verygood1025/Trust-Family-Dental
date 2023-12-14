@@ -3842,13 +3842,13 @@ const head = {
 const social = [
 	{
 		'icon' : 'assets/images/fb-icon.png',
-		'link' : '#',
+		'link' : 'https://www.facebook.com/profile.php?id=100086396437858',
 		'class' : 'fb-icon',
 		'target' : '_blank',
 	},
 	{
 		'icon' : 'assets/images/yelp-icon.png',
-		'link' : '#',
+		'link' : 'https://www.yelp.com/biz/trust-family-dental-denver',
 		'class' : 'yelp-icon',
 		'target' : '_blank',
 	},
@@ -3860,7 +3860,7 @@ const social = [
 	},
 	{
 		'icon' : 'assets/images/gg-icon.png',
-		'link' : '#',
+		'link' : 'https://maps.app.goo.gl/ezMxZYFFDvjxuueo8',
 		'class' : 'gg-icon',
 		'target' : '_blank',
 	},
@@ -3869,10 +3869,10 @@ const social = [
 const fixed_social = [
     {
         'icon' : 'assets/images/phone-icon.png',
-        'link' : '#',
+        'link' : 'tel:+13039352353',
         'title' : 'Call',
         'class' : 'phone-icon show-desk',
-        'target' : '_blank',
+        'target' : '',
     },
     {
         'icon' : 'assets/images/emergency-icon.png',
@@ -3883,7 +3883,7 @@ const fixed_social = [
     },
     {
         'icon' : 'assets/images/phone-mob.png',
-        'link' : '#',
+        'link' : 'tel:+13039352353',
         'title' : 'Call',
         'class' : 'phone-icon show-mob',
         'target' : '_blank',
@@ -3897,14 +3897,14 @@ const fixed_social = [
     },
     {
         'icon' : 'assets/images/mail-mob.png',
-        'link' : '#',
+        'link' : 'mailto:denveroffice@trustfamilydental.com',
         'title' : 'Email',
         'class' : 'mail-icon show-mob',
-        'target' : '_blank',
+        'target' : '',
     },
     {
         'icon' : 'assets/images/facebook-mob.png',
-        'link' : '#',
+        'link' : 'https://www.facebook.com/profile.php?id=100086396437858',
         'title' : 'Facebook',
         'class' : 'fb-icon show-mob',
         'target' : '_blank',

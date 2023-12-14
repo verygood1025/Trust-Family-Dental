@@ -1,3 +1,4 @@
+
 $(window).ready(function(){
 	if(fixed_social.length > 0){
 		let social_html = '';

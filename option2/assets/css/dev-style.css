@@ -355,21 +355,15 @@ body.mobile-side-slide{
     margin: 0px!important;
 }
 
-@media(max-width: 1699.5px){
+@media(max-width: 1599.5px){
     body{
-        
-    }
-}
-
-@media(max-width: 1439.5px){
-    body{
-        --container: 1300px;
+        --container: 970px;
     }
 }
 
 @media(max-width: 1367.5px){
     body {
-        --container: 1190px;
+        --container: 900px;
     }
 }
 
@@ -1205,6 +1199,14 @@ span.wpcf7-form-control-wrap .date-picker{
     visibility: visible;
 }
 
+.fake-select .data-select p.checked, .fake-select .data-select p:hover {
+    background: var(--color-border);
+}
+
+.fake-select .data-select p.disable{
+    display: none;
+}
+
 .wpcf7-not-valid-tip{
     position: absolute;
     left: 0;
@@ -1439,4 +1441,80 @@ span.wpcf7-form-control-wrap .date-picker{
 #back_to_top{
     background: var(--color-bg-2);
     color: var(--color-bg)!important;
+}
+
+@media(max-width: 1599.5px){
+
+    .home-banner .banner-item{
+        height: 800px;
+    }
+
+    .banner-content{
+        bottom: 100px;
+    }
+
+    .banner-content-wrap{
+        max-width: var(--container);
+    }
+
+    .service-content{
+        width: var(--container);
+    }
+
+    .service-wrap{
+        --col-gap: 36px;
+    }
+
+    .customer-container{
+        margin-left: 0;
+    }
+
+    #Footer .widgets_wrapper .column{
+        margin-left: calc(0px - var(--col-gap)/2)!important;
+        margin-right: calc(0px - var(--col-gap)/2)!important;
+    }
+
+    #Footer .footer_copy .one{
+        margin-left: 0px!important;
+    }
+
+    .contact-info{
+        padding-left: calc(var(--col-gap)/2);
+    }
+}
+
+@media(max-width: 1439.5px){
+    #Header_creative {
+        width: 275px;
+    }
+
+    body.header-creative.header-open{
+        padding-left: 275px;
+    }
+}
+
+@media(max-width: 1367.5px){
+    #plan-section .section_wrapper{
+        max-width: var(--container)!important;
+    }
+}
+
+@media(max-width: 1239.5px){
+
+}
+
+@media(max-width: 991.5px){
+
+}
+
+@media(max-width: 767.5px){
+
+}
+
+@media(max-width: 639.5px){
+
+}
+
+@media(max-width: 413.5px){
+    
 }

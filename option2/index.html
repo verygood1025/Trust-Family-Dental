@@ -43,6 +43,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <style id='global-styles-inline-css' type='text/css'></style>
     <!-- Custom Css -->
+    <link rel='stylesheet' id='datetime-css' href='../data/css/jquery.datetimepicker.css' type='text/css' media='all' />
     <link rel='stylesheet' id='wow-css' href='assets/libary/wowJS/animate.css' type='text/css' media='all' />
     <link rel='stylesheet' id='popup-css' href='assets/libary/poppup/km-poppup.css' type='text/css' media='all' />
     <link rel='stylesheet' id='slick-css' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' type='text/css' media='all' />
@@ -57,7 +58,7 @@
     </noscript>
 </head>
 
-<body class="home page-template-default page page-id-2 page-home template-slider color-custom content-brightness- input-brightness-light style-default button-custom layout-full-width if-modern-overlay no-content-padding header-transparent header-creative header-open sticky-header sticky-tb-color ab-hide menu-link-color menuo-right menuo-no-borders menuo-sub-active logo-no-margin cf7p-message logo-no-sticky-padding subheader-both-center footer-copy-center mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-sticky mobile-header-mini mobile-icon-user-hide mobile-icon-wishlist-hide mobile-icon-cart-hide mobile-icon-search-hide mobile-icon-wpml-ss mobile-icon-action-ss be-page-2 be-reg-27294 no_touch">
+<body class="home page-template-default page page-id-2 page-home template-slider color-custom content-brightness- input-brightness-light style-default button-custom layout-full-width if-modern-overlay no-content-padding header-transparent header-creative header-open sticky-header sticky-tb-color ab-hide menu-link-color menuo-right menuo-no-borders menuo-sub-active logo-no-margin cf7p-message logo-no-sticky-padding subheader-both-center footer-copy-center mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-sticky mobile-header-mini mobile-icon-user-hide mobile-icon-wishlist-hide mobile-icon-cart-hide mobile-icon-search-hide mobile-icon-wpml-ss mobile-icon-action-ss be-page-2 be-reg-27294 tablet-sticky mobile-sticky">
     <div class="kenw-loadding">
         <div class="loadding-gif">
             <img src="assets/images/logo.png" alt="Loadding">
@@ -128,7 +129,7 @@
                         <div class="home-banner-slider">
                             <div class="banner-item" style="--bg-img: url('assets/images/home-banner.jpg'); --bg-img-mob: url('assets/images/home-banner.jpg');">
                                 <img class="banner-img wow fadeIn" data-wow-duration="1s" data-wow-delay="0s" src="assets/images/home-banner.jpg" alt="">
-                                <div class="banner-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                                <div class="banner-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                                     <div class="banner-content-wrap">
                                         <h4>Brightening Smiles, Enhancing Lives</h4>
                                         <h2>Your Dental Experts <br>in Denver, CO</h2>
@@ -341,11 +342,17 @@
                                                                                         <span class="wpcf7-form-control-wrap" data-name="insurance"><input size="40" class="wpcf7-form-control wpcf7-text control-input" aria-invalid="false" placeholder="Insurance" value="" type="text" name="insurance"></span>
                                                                                     </div>
                                                                                     <div class="apm-col col-date">
-                                                                                        <span class="wpcf7-form-control-wrap" data-name="date"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required date-picker" aria-required="true" aria-invalid="false" placeholder="Appointment Date" value="" type="text" name="date"></span>
+                                                                                        <span class="wpcf7-form-control-wrap" data-name="date"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required date-picker" aria-required="true" aria-invalid="false" placeholder="Appointment Date" value="" type="text" id="datepicker" name="date"></span>
                                                                                     </div>
                                                                                     <div class="apm-col col-time fake-select">
-                                                                                        <span class="wpcf7-form-control-wrap" data-name="time"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required time" id="timepicker" aria-required="true" aria-invalid="false" placeholder="Time" value="" type="text" name="time" disabled></span>
+                                                                                        <span class="wpcf7-form-control-wrap" data-name="time"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required time" id="timepicker" aria-required="true" aria-invalid="false" placeholder="Time" value="" type="text" name="time" id="timepicker" disabled></span>
                                                                                         <div class="data-select" id="timepicker-list">
+                                                                                            <p class="" data-time="800">08:00 AM
+                                                                                            </p>
+                                                                                            <p class="" data-time="830">08:30 AM
+                                                                                            </p>
+                                                                                            <p class="" data-time="900">09:00 AM
+                                                                                            </p>
                                                                                             <p class="" data-time="930">09:30 AM
                                                                                             </p>
                                                                                             <p class="" data-time="1000">10:00 AM
@@ -509,7 +516,7 @@
     <script type="text/javascript" src="https://trustfamilydental.com/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
     <script type="text/javascript" id="mfn-plugins-js-extra">
     /* <![CDATA[ */
-    var mfn = { "mobileInit": "1240", "parallax": null, "responsive": "1", "sidebarSticky": "", "lightbox": { "disable": false, "disableMobile": false, "title": false }, "slider": { "blog": 0, "clients": 0, "offer": 0, "portfolio": 0, "shop": 0, "slider": 0, "testimonials": 0 }, "ajax": "https:\/\/trustfamilydental.com\/wp-admin\/admin-ajax.php" };
+    var mfn = { "mobileInit": "992", "parallax": null, "responsive": "1", "sidebarSticky": "", "lightbox": { "disable": false, "disableMobile": false, "title": false }, "slider": { "blog": 0, "clients": 0, "offer": 0, "portfolio": 0, "shop": 0, "slider": 0, "testimonials": 0 }, "ajax": "https:\/\/trustfamilydental.com\/wp-admin\/admin-ajax.php" };
     /* ]]> */
     </script>
     <script type="text/javascript" src="https://trustfamilydental.com/wp-content/themes/betheme/js/plugins.js?ver=25.0.2" id="mfn-plugins-js"></script>
@@ -520,6 +527,7 @@
     <script type="text/javascript" src="https://trustfamilydental.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.2" id="jquery-ui-mouse-js"></script>
     <script type="text/javascript" src="https://trustfamilydental.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.2" id="jquery-ui-draggable-js"></script>
     <!-- Custom JS -->
+    <script type="text/javascript" src="../data/js/jquery.datetimepicker.js" id="datetime-js"></script>
     <script type="text/javascript" src="assets/libary/wowJS/wow.min.js" id="wow-js"></script>
     <script type="text/javascript" src="assets/libary/poppup/km-poppup.js" id="popup-js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" id="fancy-js"></script>
