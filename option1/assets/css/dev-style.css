@@ -1063,3 +1063,26 @@ body #Top_bar.is-sticky{
 #Footer .footer_copy .wrap-footer p a {
     color: var(--color-hover-social);
 }
+
+@media (min-width: 992px) {
+    body:not(.header-simple) #Top_bar #menu {
+        display: block !important;
+    }
+
+    #Top_bar a.responsive-menu-toggle {
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 991.5px) {
+    body:not(.header-simple) #Top_bar #menu {
+        display: none !important;
+    }
+
+    #Top_bar a.responsive-menu-toggle {
+        display: block !important;
+    }
+}
+
+
