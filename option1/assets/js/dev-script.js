@@ -1,4 +1,4 @@
-fixed_social = [
+fixed_social2 = [
     {
         'icon' : 'assets/images/phone-icon.png',
         'icon_mob' : 'assets/images/phone-icon-hover-mob.png',
@@ -3881,7 +3881,7 @@ const head1 = {
 };
 
 $(window).ready(function(){
-    if($('#menu-main-menu').length > 0){
+  if($('#menu-main-menu').length > 0){
 		let menu_html = '';
 		$.each(head1.menu_list, function(i, item){
 			menu_html += `<li id="menu-item-${i}" class="menu-item menu-item-type-post_type menu-item-object-pag ${item.menu_class ? item.menu_class : ''} ${item.menu_child.length > 0 ? 'menu-item-has-children submenu' : ''}">`;
@@ -3901,15 +3901,16 @@ $(window).ready(function(){
 		$('#menu-main-menu').html(menu_html);
 	}
 
-	if(fixed_social.length > 0){
+	if(fixed_social2.length > 0){
 		let social_html = '';
-		$.each(fixed_social, function(i, item){
-			social_html += `<li class="${item.class}"><a href="${item.link}" target="${item.target}"><img class="desk" src="${item.icon}"><img class="hover-mob" src="${item.icon_mob}"></a></li>`;
+		$.each(fixed_social2, function(i, item){
+			social_html += `<li class="${item.class}"><a href="${item.link}" target="${item.target}"><img src="${item.icon}"></a></li>`;
 		});
 		$('.fixed-socials ul').html(social_html);
 	}
 
-    if(inline_style2){
+  if(inline_style2){
 		$('#global-styles-inline-css').html(inline_style2);
 	}
+
 })
