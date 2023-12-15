@@ -116,7 +116,10 @@
                                             <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: fadeInUp;">From Smiles to Confidence</h4>
                                             <h5 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: fadeInUp;">Your Dental Wellness Destination</h5>
                                         </div>
-                                        <div class="banner-img wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: fadeInUp;"><img src="assets/images/banner.jpg" alt="Banner"></div>
+                                        <div class="banner-img wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: fadeInUp;">
+                                            <img class="desk" src="assets/images/banner.jpg" alt="Banner">
+                                            <img class="mob" src="assets/images/banner-mob.jpg" alt="Banner">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -255,39 +258,51 @@
                                                     </div>
                                                     <div class="col-booking-wrap">
                                                         <div class="col-booking-item">
-                                                            <div class="bookingform wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.5s; animation-name: fadeInDown;">
+                                                            <div class="bookingform">
                                                                 <div class="wrap-title">
                                                                     <h2>Book An Appointment</h2>
                                                                 </div>
-                                                                <div class="wrap-booking-row">
-                                                                    
-                                                                    <div class="booking-row">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="full-name">
-                                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="full-name">
-                                                                        </span>
+                                                                <form action="/#wpcf7-f8-p2-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+                                                                    <div style="display: none;">
+                                                                        <input type="hidden" name="_wpcf7" value="8">
+                                                                        <input type="hidden" name="_wpcf7_version" value="5.8.4">
+                                                                        <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f8-p2-o1">
+                                                                        <input type="hidden" name="_wpcf7_container_post" value="2">
+                                                                        <input type="hidden" name="_wpcf7_posted_data_hash" value="">
                                                                     </div>
-                                                                    <div class="booking-row">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-email">
-                                                                            <input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="your-email">
-                                                                        </span>
+                                                                    <div class="wrap-booking-row">
+                                                                        <div class="booking-row">
+                                                                            <span class="wpcf7-form-control-wrap" data-name="full-name">
+                                                                                <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="full-name">
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="booking-row">
+                                                                            <span class="wpcf7-form-control-wrap" data-name="your-email">
+                                                                                <input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="your-email">
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="booking-row booking-row-phone">
+                                                                            <span class="wpcf7-form-control-wrap" data-name="your-phone">
+                                                                                <input size="40" class="wpcf7-form-control wpcf7-phonetext wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-phonetext" data-numberonly="true" aria-required="true" aria-invalid="false" placeholder="Phone" value="" type="text" name="your-phone" autocomplete="off">
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="booking-row booking-row-date">
+                                                                            <!-- <span class="wpcf7-form-control-wrap" data-name="date">
+                                                                                <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required date-picker" id="datepicker" aria-required="true" aria-invalid="false" placeholder="Appointment Date" value="" type="text" name="date">
+                                                                            </span> -->
+                                                                            <span class="wpcf7-form-control-wrap" data-name="date">
+                                                                                <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required date-picker" aria-required="true" aria-invalid="false" placeholder="Appointment Date" value="" type="text" id="datepicker" name="date">
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="booking-row booking-row-textarea">
+                                                                            <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" name="your-message"></textarea></span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="booking-row booking-row-phone">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-phone">
-                                                                            <input size="40" class="wpcf7-form-control wpcf7-phonetext wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-phonetext" data-numberonly="true" aria-required="true" aria-invalid="false" placeholder="Phone" value="" type="text" name="your-phone" autocomplete="off">
-                                                                        </span>
+                                                                    <div class="submit-btn">
+                                                                        <input class="wpcf7-form-control wpcf7-submit has-spinner booking-btn" type="submit" value="Submit"><span class="wpcf7-spinner"></span>
                                                                     </div>
-                                                                    <div class="booking-row booking-row-date">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="date">
-                                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="datepicker" aria-required="true" aria-invalid="false" placeholder="Appointment Date" value="" type="text" name="date">
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="booking-row booking-row-textarea">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" name="your-message"></textarea></span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="submit-btn">
-                                                                    <input class="wpcf7-form-control wpcf7-submit has-spinner booking-btn" type="submit" value="Submit"><span class="wpcf7-spinner"></span>
-                                                                </div>
+                                                                </form>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -334,7 +349,7 @@
             <div class="footer_copy">
                 <div class="container">
                     <div class="column one">
-                        <a id="back_to_top" class="footer_button" href=""><i class="icon-up-open-big"></i></a>
+                        <a id="back_to_top" class="footer_button sticky scroll" href="" aria-label="Back to top icon"><i class="icon-up-open-big"></i></a>
                         <div class="copyright">
                             <div class="wrap-footer">
                                 <p>Copyright © <year></year> Trust Family Dental. <span class="no-wrap">All Rights Reserved.</span></p>

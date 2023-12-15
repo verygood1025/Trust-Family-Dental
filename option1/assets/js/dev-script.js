@@ -1,6 +1,7 @@
 fixed_social = [
     {
         'icon' : 'assets/images/phone-icon.png',
+        'icon_mob' : 'assets/images/phone-icon-hover-mob.png',
         'link' : '#',
         'title' : 'Call',
         'class' : 'phone-icon show-all',
@@ -8,6 +9,7 @@ fixed_social = [
     },
     {
         'icon' : 'assets/images/fb-icon.png',
+        'icon_mob' : 'assets/images/fb-icon-hover-mob.png',
         'link' : '#',
         'title' : 'Facebook',
         'class' : 'fb-icon show-mob',
@@ -15,6 +17,7 @@ fixed_social = [
     },
     {
         'icon' : 'assets/images/yelp-icon.png',
+        'icon_mob' : 'assets/images/yelp-icon-hover-mob.png',
         'link' : '#',
         'title' : 'Yelp',
         'class' : 'yelp-icon show-mob',
@@ -22,6 +25,7 @@ fixed_social = [
     },
     {
         'icon' : 'assets/images/ig-icon.png',
+        'icon_mob' : 'assets/images/ig-icon-hover-mob.png',
         'link' : '#',
         'title' : 'Instagram',
         'class' : 'ig-icon show-mob',
@@ -29,6 +33,7 @@ fixed_social = [
     },
     {
         'icon' : 'assets/images/gg-icon.png',
+        'icon_mob' : 'assets/images/gg-icon-hover-mob.png',
         'link' : '#',
         'title' : 'Google',
         'class' : 'gg-icon show-mob',
@@ -3829,11 +3834,77 @@ const inline_style2 = `
     }
 `;
 
+const head1 = {
+	'menu_list' : [
+		{
+			'menu_title': 'Home',
+			'menu_link' : '/option1/',
+			'menu_class' : 'menu-item-home current-menu-item current_page_item',
+			'menu_child' : []
+		},
+		{
+			'menu_title': 'About',
+			'menu_link' : '#',
+			'menu_class' : '',
+			'menu_child' : []
+		},
+		{
+			'menu_title': 'Services',
+			'menu_link' : '#',
+			'menu_class' : '',
+			'menu_child' : [
+				{
+					'menu_title': 'General Dentistry',
+					'menu_link' : '#',
+					'menu_child' : []
+				},
+				{
+					'menu_title': 'Implants',
+					'menu_link' : '#',
+					'menu_child' : []
+				},
+			]
+		},
+		{
+			'menu_title': 'Patients',
+			'menu_link' : '#',
+			'menu_class' : '',
+			'menu_child' : []
+		},
+		{
+			'menu_title': 'Contact',
+			'menu_link' : '#',
+			'menu_class' : '',
+			'menu_child' : []
+		},
+	]
+};
+
 $(window).ready(function(){
+    if($('#menu-main-menu').length > 0){
+		let menu_html = '';
+		$.each(head1.menu_list, function(i, item){
+			menu_html += `<li id="menu-item-${i}" class="menu-item menu-item-type-post_type menu-item-object-pag ${item.menu_class ? item.menu_class : ''} ${item.menu_child.length > 0 ? 'menu-item-has-children submenu' : ''}">`;
+			menu_html += `<a href="${item.menu_link}"><span>${item.menu_title}</span</a>`;
+			if(item.menu_child.length > 0){
+				menu_html += '<a class="menu-toggle" href="#" role="link" aria-label="Toggle submenu"></a>';
+				menu_html += '<ul class="sub-menu">';
+				$.each(item.menu_child,function(j, child_item){
+					menu_html += `<li id="menu-item-${i}_${j}" class="menu-item menu-item-type-post_type menu-item-object-page ${child_item.menu_class ? child_item.menu_class : ''}">`;
+					menu_html += `<a href="${child_item.menu_link}"><span>${child_item.menu_title}</span</a>`;
+					menu_html += '</li>';
+				});
+				menu_html += '</ul>';
+			}
+			menu_html += '</li>';
+		});
+		$('#menu-main-menu').html(menu_html);
+	}
+
 	if(fixed_social.length > 0){
 		let social_html = '';
 		$.each(fixed_social, function(i, item){
-			social_html += `<li class="${item.class}"><a href="${item.link}" target="${item.target}"><img src="${item.icon}"></a></li>`;
+			social_html += `<li class="${item.class}"><a href="${item.link}" target="${item.target}"><img class="desk" src="${item.icon}"><img class="hover-mob" src="${item.icon_mob}"></a></li>`;
 		});
 		$('.fixed-socials ul').html(social_html);
 	}
